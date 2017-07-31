@@ -1,0 +1,15 @@
+{
+  "name": "art-and-logic-programming-challenge",
+  "version": "1.0.0",
+  "description": "Part 1 of programming challenge",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "keenan johnson",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^4.1.0",
+    "mocha": "^3.4.2"
+  }
+}
