@@ -1,0 +1,14 @@
+Encoding values:
+6111 [Encoded: ]
+340 [Encoded: ]
+-2628 [Encoded: ]
+-255 [Encoded: ]
+7550 [Encoded: ]
+
+
+Decoded values:
+0A0A [Decoded: ]
+0029 [Decoded: ]
+3F0F [Decoded: ]
+4400 [Decoded: ]
+5E7F [Decoded: ]
