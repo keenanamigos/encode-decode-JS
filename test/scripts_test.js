@@ -1,71 +1,71 @@
 var expect = require('chai').expect;
 
 // Sanity check
-describe('Mocha', function () {
-    it('should run our tests using npm', function () {
+describe('Mocha', () => {
+    it('should run our tests using npm', () => {
         expect(true).to.be.ok;
     });
 });
 
 // Encode
-describe('getIntermediateDecimalValue', function () {
+describe('getIntermediateDecimalValue', () => {
     const getIntermediateDecimalValue = require('../scripts/scripts').getIntermediateDecimalValue;
 
-    it('should add the integer 8192 to a given parameter', function () {
+    it('should add the integer 8192 to a given parameter', () => {
         let someInteger = 20;
 
         expect(getIntermediateDecimalValue(20)).to.equal(8212);
     });
 });
 
-describe('getIntermediateHexValue', function () {
+describe('getIntermediateHexValue', () => {
     const getIntermediateHexValue = require('../scripts/scripts').getIntermediateHexValue;
 
-    it ('should convert the intermediate decimal value into the intermediate hex value', function () {
+    it ('should convert the intermediate decimal value into the intermediate hex value', () => {
         let intermediateDecimalValue = 8192;
 
         expect(getIntermediateHexValue(intermediateDecimalValue)).to.equal('2000');
     });
 });
 
-describe('getEncodedHexValue', function () {
+describe('getEncodedHexValue', () => {
     const getEncodedHexValue = require('../scripts/scripts').getEncodedHexValue;
 
-    it ('should convert the intermediate hex value into the encoded hex value', function () {
+    it ('should convert the intermediate hex value into the encoded hex value', () => {
         let intermediateHexString = "2000";
 
         expect(getEncodedHexValue(intermediateHexString)).to.equal('4000');
     });
 });
 
-// describe('ConvertIntToTextEncoding', function () {
-//     it('should convert the integer 8191 into the proper encoded hex value', function () {
+// describe('ConvertIntToTextEncoding', () => {
+//     it('should convert the integer 8191 into the proper encoded hex value', () => {
 
 //     });
 // });
 
 // Decode
-describe('convertIntermediateDecimalToUnencodedDecimal', function () {
+describe('convertIntermediateDecimalToUnencodedDecimal', () => {
     const convertIntermediateDecimalToUnencodedDecimal = require('../scripts/scripts').convertIntermediateDecimalToUnencodedDecimal;
 
-    it ('should convert the intermediate decimal value to the unencoded decimal value', function () {
+    it ('should convert the intermediate decimal value to the unencoded decimal value', () => {
         let intermediateDecimalValue = 8192;
 
         expect(convertIntermediateDecimalToUnencodedDecimal(intermediateDecimalValue)).to.equal(0);
     });
 });
 
-describe('convertIntermediateHexToIntermediateDecimal', function () {
+describe('convertIntermediateHexToIntermediateDecimal', () => {
     const convertIntermediateHexToIntermediateDecimal = require('../scripts/scripts').convertIntermediateHexToIntermediateDecimal;
 
-    it ('should convert the intermediate hex value to the proper intermediate decimal value', function () {
+    it ('should convert the intermediate hex value to the proper intermediate decimal value', () => {
         let intermediateHexString = "2000";
 
         expect(convertIntermediateHexToIntermediateDecimal(intermediateHexString)).to.equal(8192);
     });
 });
 
-describe('convertEncodedHexToIntermediateHex', function () {
+describe('convertEncodedHexToIntermediateHex', () => {
     const convertEncodedHexToIntermediateHex = require('../scripts/scripts').convertEncodedHexToIntermediateHex;
 
     it ('should convert the encoded hex value to the proper intermediate hex value', function() {
