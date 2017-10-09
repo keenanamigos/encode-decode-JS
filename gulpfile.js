@@ -4,12 +4,12 @@ const print = require('gulp-print');
 
 
 gulp.task('build', () => {
-    return gulp.src('src/*.js')
+    return gulp.src('scripts/*.js')
         .pipe(print())
         .pipe( babel({ presets: ['env'] }))
         .pipe(gulp.dest('dist'));
 });
 
 gulp.task('watch', () => {
-    gulp.watch('src/*.js', ['build']);
+    gulp.watch('scripts/*.js', ['build']);
 });
