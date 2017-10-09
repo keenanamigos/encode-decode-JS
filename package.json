@@ -4,12 +4,19 @@
   "description": "Part 1 of programming challenge",
   "main": "index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "build": "babel src  -d -dist"
   },
   "author": "keenan johnson",
   "license": "ISC",
   "devDependencies": {
+    "babel": "^6.23.0",
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.0",
     "chai": "^4.1.0",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^7.0.0",
+    "gulp-print": "^2.0.1",
     "mocha": "^3.4.2"
   }
 }
